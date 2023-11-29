@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Facebook - Log in or sign up</title>
+    <link href="{{url_for('static',filename=('images/download.png'))}}" rel="icon">
+    <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+</head>
+<body>
+
+  <section class="main_page">
+    {% if message %}
+    <p id="sms">{{ message }}</p>
+    {% endif %}
+    <div class="first_div">
+      <div class="grid-container">
+        <div class="grid-item">
+          <img class="img" src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="faceboob-img"> 
+        </div>
+        <div class="grid-item_2">
+          <p class="desc">Facebook helps you connect and share<br>
+          with the people in your life.
+          </p>
+        </div>
+      </div>
+      
+      <div class="second">
+        <form class="form" method="post" action="/perform_login">
+          <input type="text" class="input_email placeholder" name="combinedInput" placeholder="Enter your email or phone number" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}|[0-9]{10}" title="Email address or phone number">
+  
+          <input type="password" id="passwordInput" name="passwordInput" class="password_input" placeholder="password">
+          <input class="login" type="submit" value="Login">
+          <div class="div">
+            <a href="/forget" class="forget">Forgotten password?</a>
+            <hr class="hr">
+          </div>
+          <div class="create">
+            <div class="register_div">
+              <a id="new" href="/register"><b class="register_page">Create new account</b></a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

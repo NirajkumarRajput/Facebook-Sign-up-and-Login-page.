@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Facebook - Log in or sign up</title>
+  <link href="{{url_for('static',filename=('images/download.png'))}}" rel="icon">
+  <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+</head>
+<body>
+      <section id="main_page">
+        <div id="first">
+          <div id="second">
+            <div id="sign_up">
+                 <h1 class="h1">Sign Up</h1>
+                 <h3 class="h3">It's quick and easy.</h3>
+            </div>
+            <hr id="hr">
+                  <div id="message">
+                    {% if message %}
+                    <p id="message_1">{{ message }}</p>
+                    {% endif %}
+                  </div>
+              <form action="/perform_registration" method="post">
+                 <div id="form_div">
+                  <input type="text" id="input_first" placeholder="First name" name="first_name" class="placeholder">
+                  <input type="text" id="input_second" placeholder="Surname" name="sur_name">
+                 </div>
+                 <div id="mobile_div">
+                  <input type="text" id="mobile_email" name="email_id" placeholder="Mobile number or email address">
+                 </div>
+                 <div id="mobile_input">
+                  <input type="text" id="mobile_password" name="password" placeholder="New password">
+                 </div>
+                 <h3 id="h3">Date of Birth</h3>
+                 <div id="details">
+                  <input list="option" name="day" id="date" type="text">
+                  <datalist id="option">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                    <option value="6"></option>
+                    <option value="7"></option>
+                    <option value="8"></option>
+                    <option value="9"></option>
+                    <option value="10"></option>
+                    <option value="11"></option>
+                    <option value="12"></option>
+                    <option value="13"></option>
+                    <option value="14"></option>
+                    <option value="15"></option>
+                    <option value="16"></option>
+                    <option value="17"></option>
+                    <option value="18"></option>
+                    <option value="19"></option>
+                    <option value="20"></option>
+                    <option value="21"></option>
+                    <option value="22"></option>
+                    <option value="23"></option>
+                    <option value="24"></option>
+                    <option value="25"></option>
+                    <option value="26"></option>
+                    <option value="27"></option>
+                    <option value="28"></option>
+                    <option value="29"></option>
+                    <option value="30"></option>                  
+                  </datalist>
+                  <input list="option2" name="month" id="months" type="text">
+                  <datalist id="option2">
+                    <option value="January"></option>
+                    <option value="February"></option>
+                    <option value="March"></option>
+                    <option value="April"></option>
+                    <option value="May"></option>
+                    <option value="June"></option>
+                    <option value="July"></option>
+                    <option value="August"></option>
+                    <option value="September"></option>
+                    <option value="October"></option>
+                    <option value="November"></option>
+                    <option value="December"></option>
+                  </datalist>
+                  <input list="option3" name="year" id="year" type="text">
+                  <datalist id="option3">
+                    <option value="2023"></option>
+                    <option value="2022"></option>
+                    <option value="2021"></option>
+                    <option value="2020"></option>
+                    <option value="2019"></option>
+                    <option value="2018"></option>
+                    <option value="2017"></option>
+                    <option value="2016"></option>
+                    <option value="2015"></option>
+                    <option value="2014"></option>
+                    <option value="2013"></option>
+                    <option value="2012"></option>
+                    <option value="2011"></option>
+                    <option value="2010"></option>
+                    <option value="2009"></option>
+                    <option value="2008"></option>
+                    <option value="2007"></option>
+                    <option value="2006"></option>
+                    <option value="2005"></option>
+                    <option value="2004"></option>
+                    <option value="2003"></option>
+                    <option value="2002"></option>
+                    <option value="2001"></option>
+                    <option value="2000"></option>
+                  </datalist>
+                 </div>
+                 <h3 id="h3_1">Gender</h3>
+                 <div id="Gender">
+                  <div id="female">
+                    <h3 id="f_name">Female</h3>
+                    <div id="female_1">
+                      <input type="checkbox" name="gender" id="checkbox_fe" value="Female">
+                    </div>
+                  </div>
+                  <div id="male">
+                    <h3 id="m_name">Male</h3>
+                    <div id="male_1">
+                      <input type="checkbox" name="gender" id="checkbox_m" value="Male">
+                    </div>
+                  </div>
+                 </div>
+                 <input id="register" type="submit" value="register">
+              </form>
+          </div>
+        </div>
+      </section>
+</body>
+</html>

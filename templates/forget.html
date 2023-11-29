@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Forgotten Password | Can't Login</title>
+  <link href="{{url_for('static',filename=('images/download.png'))}}" rel="icon">
+  <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="forget_div">
+      <div id="face-div">
+        <img id="facebook-img" src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="facebook-logo">
+      </div>
+      {% if message %}
+      <p class="sms">{{ message }}</p>
+      {% endif %}
+      <div class="div_input">
+        <form class="form">
+          <input type="text" class="email" name="combinedInput" placeholder="Email or phone" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}|[0-9]{10}">
+          <input type="password" class="password" name="passwordInput" placeholder="password">
+          <input class="for_login" type="submit" value="Login">
+        </form>
+      </div>
+    </div>
+  </header>
+ 
+  <div id="main">
+    <div id="find">
+      <h3 class="find_ac">Delete Your Accont</h3>
+      <hr class="hr_line">
+      <p class="find_para">Please enter your email address or mobile number to delete<br>
+        for your account.
+      </p>
+      <form method="post" action="/perform_delete">
+        <input type="text" class="email_password" name="old_email" placeholder="Email address or mobile number">
+        <hr class="hr_line_1">
+        <div class="buttom">
+          <button class="Cancel"><a href="/">Cancel</a></button>
+          <input class="search" type="submit" value="Delete">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+
+        
